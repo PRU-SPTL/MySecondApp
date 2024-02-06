@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output Github Context
-        run: echo "${{ toJSON(github) }} >> test.txt"
+        run: echo "${{ toJSON(github) }} " >> test.txt
   upload:
      runs-on: ubuntu-latest
      steps:
