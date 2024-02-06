@@ -10,11 +10,17 @@ jobs:
     steps:
       - name: Output Github Context
         run: echo "${{ toJSON(github) }} " >> test.txt
-  upload:
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: dist-files
+          path: |
+           test.txt
+  download:
      runs-on: ubuntu-latest
      steps:
-       - name: Upload Artifacts
-         uses: actions/upload-artifact@v4.3.1
+       - name: Download Artifacts
+         uses: actions/download-artifact@v4.1.2
          with:
            name: dist-files
            path: |
