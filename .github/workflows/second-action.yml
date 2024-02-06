@@ -1,5 +1,9 @@
 name: Output Information
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+    - main
+  workflow_dispatch:
 jobs:
   info: 
     runs-on: ubuntu-latest
