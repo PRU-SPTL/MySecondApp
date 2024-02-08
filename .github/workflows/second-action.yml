@@ -9,12 +9,14 @@ env:
 jobs:
   info: 
     runs-on: ubuntu-latest
+    environment: dev
     steps:
       - name: Output Github Context
         run: |
           pwd
           echo "$FIRST_ENV" >> test.txt
-          echo "${{ secrets.MY_SECRET }}" >> test.txt
+          echo "${{ secrets.MY_SECRET }}" > test.txt
+          echo "${{ secrets.PASSWORD }}" > test.txt
       - name: Cache Files
         uses: actions/cache@v4.0.0
         with: 
