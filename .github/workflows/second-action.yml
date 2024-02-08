@@ -17,7 +17,7 @@ jobs:
       - name: Cache Files
         uses: actions/cache@v4.0.0
         with: 
-          path: .github/workflows/first-action.yml
+          path: .github/workflows/
           key: workflows-${{ hashFiles('.github/workflows/first-action.yml')}}
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4.3.1
