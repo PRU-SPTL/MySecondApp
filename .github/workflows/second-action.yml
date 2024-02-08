@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output Github Context
-        run: echo "${{ FIRST_ENV }} " >> test.txt
+        run: echo "$FIRST_ENV" >> test.txt
       - name: Cache Files
         uses: actions/cache@v4.0.0
         with: 
