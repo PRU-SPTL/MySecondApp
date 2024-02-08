@@ -14,6 +14,7 @@ jobs:
         run: |
           pwd
           echo "$FIRST_ENV" >> test.txt
+          echo "${{ env.FIRST_ENV }}" > test.txt
       - name: Cache Files
         uses: actions/cache@v4.0.0
         with: 
