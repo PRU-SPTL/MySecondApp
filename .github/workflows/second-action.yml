@@ -38,3 +38,10 @@ jobs:
            name: dist-files
            path: |
              test.txt
+       - name: Simulate Error
+         run: exit -1
+         id: simulate-error
+       - name: Excute Upon Failure
+         if: steps.simulate-error.outcome == 'failure'
+         run: echo "This catches failure"
+      
