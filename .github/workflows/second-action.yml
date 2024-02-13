@@ -28,7 +28,7 @@ jobs:
           name: dist-files
           path: |
            test.txt
-  download:
+   download:
      runs-on: ubuntu-latest
      needs: [build]
      steps:
@@ -49,7 +49,7 @@ jobs:
      steps:
        - name: Simulate Error
          run: exit -1
-         contiune-on-error: true
+         continue-on-error: true
        - name: Deploy
          run: echo "Contunie on Error"
          
