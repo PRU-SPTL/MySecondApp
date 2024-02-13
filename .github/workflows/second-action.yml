@@ -7,7 +7,7 @@ on:
 env:
   FIRST_ENV: "Hello World"
 jobs:
-  info: 
+   build: 
     runs-on: ubuntu-latest
     environment: dev
     steps:
@@ -30,7 +30,7 @@ jobs:
            test.txt
   download:
      runs-on: ubuntu-latest
-     needs: [info]
+     needs: [build]
      steps:
        - name: Download Artifacts
          uses: actions/download-artifact@v4.1.2
@@ -41,7 +41,17 @@ jobs:
        - name: Simulate Error
          run: exit -1
          id: simulate-error
-       - name: Excute Upon Failure
+       - name: Execute Upon Failure
          if: failure() && steps.simulate-error.outcome == 'failure'
          run: echo "This catches failure"
+   deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Simulate Error
+         run: exit -1
+         contiune-on-error: true
+       - name: Deploy
+         run: echo "Contunie on Error"
+         
+        
       
