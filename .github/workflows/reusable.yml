@@ -1,8 +1,14 @@
 name: Reusable Deploy
-on: workflow_call
+on: 
+  workflow_call:
+    inputs: 
+      free-text: 
+        description: Dummy Variable
+        required: true
+        type: string
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Output Information
-        run: echo "Dummy Text"
+        run: echo "${{ inputs.free-text }}"
