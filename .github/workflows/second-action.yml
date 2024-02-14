@@ -1,9 +1,5 @@
 name: Output Information
-on: 
-  push:
-    branches:
-    - main
-  workflow_dispatch:
+on: workflow_dispatch
 env:
   FIRST_ENV: "Hello World"
 jobs:
