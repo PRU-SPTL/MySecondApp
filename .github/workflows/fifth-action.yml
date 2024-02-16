@@ -1,0 +1,9 @@
+ name: Custom Action
+ on: workflow_dispatch
+ jobs:
+   composite-action:
+     runs-on: ubuntu-latest
+     container: node:20
+     steps:
+       - name: "Print Dummy Text"
+         uses: "./.github/actions/custom-action"
