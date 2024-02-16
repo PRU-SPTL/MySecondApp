@@ -1,7 +1,12 @@
 name: "Dummy Action"
 description: "This is a dummy action"
+inputs:
+  free-text:
+    description: "This is a free text"
+    required: true
 runs:
   using: 'composite'
   steps:
     - name: Print Dummy Text
-      run: echo "Hello World!"
+      run: echo "Hello World! ${{ inputs.free-text }}"
+      shell: bash
