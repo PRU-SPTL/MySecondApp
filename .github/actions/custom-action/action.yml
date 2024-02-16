@@ -1,0 +1,7 @@
+name: "Dummy Action"
+description: "This is a dummy action"
+runs:
+  using: 'composite'
+  steps:
+    - name: Print Dummy Text
+      run: echo "Hello World!"
