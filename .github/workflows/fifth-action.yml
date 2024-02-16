@@ -5,5 +5,7 @@
      runs-on: ubuntu-latest
      container: node:20
      steps:
+       - name: "Checkout Code"
+         uses: actions/checkout@v4.1.1
        - name: "Print Dummy Text"
          uses: "./.github/actions/custom-action"
