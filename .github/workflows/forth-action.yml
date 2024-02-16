@@ -4,10 +4,10 @@ jobs:
   container:
     runs-on: ubuntu-latest
     container: 
-      image: node: 20
+      image: node:20
     services:
       node:
-        image: nginx: latest
+        image: nginx:latest
         ports: 
           - 3000:80
     steps:
