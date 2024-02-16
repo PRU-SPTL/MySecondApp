@@ -14,4 +14,4 @@ jobs:
       - name: Print Dummy Text
         run: echo "Hellow World!"
       - name: Curl Command
-        run: curl -v -k node:3000
+        run: curl -v -k node:80
