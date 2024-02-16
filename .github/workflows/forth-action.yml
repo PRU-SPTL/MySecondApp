@@ -1,0 +1,17 @@
+name: Jobs in Container 
+on: workflow_dispatch
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    container: 
+      image: node: 20
+    services:
+      node:
+        image: nginx: latest
+        ports: 
+          - 3000:80
+    steps:
+      - name: Print Dummy Text
+        run: echo "Hellow World!"
+      - name: Curl Command
+        run: curl -v -k node:3000
