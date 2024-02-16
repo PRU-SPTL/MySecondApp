@@ -9,3 +9,5 @@
          uses: actions/checkout@v4.1.1
        - name: "Print Dummy Text"
          uses: "./.github/actions/custom-action"
+         with:
+           free-text: "Felix"
