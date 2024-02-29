@@ -9,4 +9,4 @@ jobs:
       - name: Print Dummy Text
         run: echo "Hello World!"
       - name: Get code
-        uses: actions/checkout@3
+        uses: actions/checkout@v4.1.1
