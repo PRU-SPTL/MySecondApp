@@ -1,0 +1,8 @@
+name: Sixth Workflow
+on: workflow_dispatch
+jobs:
+  self_host_job:
+    runs-on: self-hosted
+    steps:
+      - name: Print Dummy Text
+        run: echo "Hello World!"
